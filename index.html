@@ -6,43 +6,60 @@
   <title>Joe</title>
   <style>
     html, body {
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       height: 100%;
-      display: grid;
-      place-items: center;
       font-family: -apple-system, BlinkMacSystemFont, "Courier New", Helvetica, Arial, sans-serif;
       background: #f9f9f9;
       color: #111;
-      text-align: center;
     }
+
     body {
-      gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
     }
+
+    .top-content {
+      text-align: left;       /* align text to left */
+      padding: 1rem;          /* spacing from edges */
+    }
+
     img {
       width: 240px;
       height: 300px;
-      border-radius: 0%;
       object-fit: cover;
       display: block;
-      margin: 1rem auto;
+      margin-top: 1rem;
     }
+
     .links {
-      display: grid;
-      gap: 0.4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;  /* align links to the left */
+      padding: 1rem;            /* spacing from bottom-left corner */
     }
+
     .links a {
       text-decoration: none;
       color: inherit;
+      margin-bottom: 0.3rem;
     }
+
     .links a:hover {
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <p>Interested in Bioengineering, Neuroengineering and R&amp;D of sorts. <br>
-    I build AI, sensing systems, real-time signal processing &amp; haptics.</p>
-  <img src="assets/joe.jpg" alt="Portrait of Joe Kojima">
+  <div class="top-content">
+    <h1>Joe</h1>
+    <p>Interested in Bioengineering, Neuroengineering and R&amp;D of sorts.<br>
+       I build AI, sensing systems, real-time signal processing &amp; haptics.</p>
+    <img src="assets/joe.jpg" alt="Portrait of Joe Kojima">
+  </div>
+
   <div class="links">
     <a href="portfolio.html">Portfolio</a>
     <a href="mailto:joekoji@seas.upenn.edu">Email</a>
